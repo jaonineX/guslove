@@ -38,21 +38,22 @@ plt.ylabel('Count')
 
 st.pyplot(plt)
 
+
+
 html_2 = """
 <div style="background-color:#0E1117;border-bottom: 3px solid #ffffff;border-top: 3px solid #ffffff;">
-<center><h3>The relationship between (Favorite Music Genre) and (Gender)</h3></center>
+<center><h3>Count of Category by Region</h3></center>
 </div>
 """
 st.markdown(html_2, unsafe_allow_html=True)
 st.markdown("")
 
 
+
 plt.figure(figsize=(15,5))
-gender_data['Favorite Color'].value_counts().plot.bar(edgecolor='red', alpha=0.5)
-
-plt.title('Count of Favorite Colors')
-plt.xlabel('Favorite Color')
-plt.ylabel('Count')
-
+sns.countplot(x='Region', data=gender_data )
+plt.title('Count of Category by Region')
+plt.xlabel('Region')
+plt.ylabel('Sales')
 
 st.pyplot(plt)
