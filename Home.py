@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import pandas as pd
 
-gender_data=pd.read_csv('./data/Transformed Data Set - Sheet1.csv')
+gender_data=pd.read_csv('./data/superstore.csv')
 
 
 html_0 = """
